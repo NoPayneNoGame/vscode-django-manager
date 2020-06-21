@@ -3,6 +3,8 @@
   "displayName": "Django manager",
   "description": "Run manage.py commands from VSCode",
   "version": "1.0.0",
+  "publisher": "stevenpayne",
+  "repository": "https://github.com/NoPayneNoGame/vscode-django-manager",
   "engines": {
     "vscode": "^1.46.0"
   },
