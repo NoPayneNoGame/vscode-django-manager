@@ -1,0 +1,59 @@
+{
+  "name": "django-manager",
+  "displayName": "Django manager",
+  "description": "Run manage.py commands from VSCode",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.46.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:django-manager.makeMigrations",
+    "onCommand:django-manager.migrate",
+    "onCommand:django-manager.runServer",
+    "onCommand:django-manager.loadData"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "django-manager.makeMigrations",
+        "title": "Django: Make Migrations"
+      },
+      {
+        "command": "django-manager.migrate",
+        "title": "Django: Migrate"
+      },
+      {
+        "command": "django-manager.runServer",
+        "title": "Django: Run Server"
+      },
+      {
+        "command": "django-manager.migrateAndRun",
+        "title": "Django: Migrate and Run Server"
+      },
+      {
+        "command": "django-manager.loadData",
+        "title": "Django: Load Data"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "yarn run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.46.0",
+    "@types/glob": "^7.1.1",
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^13.11.0",
+    "eslint": "^6.8.0",
+    "glob": "^7.1.6",
+    "mocha": "^7.1.2",
+    "typescript": "^3.8.3",
+    "vscode-test": "^1.3.0"
+  }
+}
